@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/jsns-removebg-preview.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>ChatGPT Replica</title>
+    {% endif %}
+</head>
+<body>
+	<!-- Panel container -->
+	<div class="panel">
+        
+        <div class="panel-button">
+            <a href="{{ url_for ('index') }}"><button>+ New Chat</button></a>
+        </div>
+
+        <div class="chat-bubble">
+
+        </div>
+	</div>
+	
+
+<div class="entire-chat">
+    {% for input, output in responses.items() %}
+    <div class="new-chat">
+        <h1>{{ input }}</h1>
+        <i class="fa-regular fa-pen-to-square"></i>
+    </div>
+    
+    <div class="api-response">
+        <h1>{{ output }}</h1>
+    </div>
+    {% endfor %}
+    
+</div>
+
+
+
+
+
+
+    <div class="text-input-prompt">
+
+        <div class="input-and-icon-container">
+            <form action="/new_chat" method="POST">
+                <input type="text" name="prompt" id="prompt">
+                <input type="submit" value="" class="find-button">
+            </form>
+        </div>
+        <h5>This is only a small project and is not the real ChatGPT, this project is limited to text compliation.</h5>
+    </div>
+
+
+
+
+    
+</body>
+</html>

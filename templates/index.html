@@ -1,1 +1,157 @@
-<h1>Hskjn</h1>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/jsns-removebg-preview.ico" type="image/x-icon">
+    <script src="https://kit.fontawesome.com/89bc05284d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>ChatGPT Replica</title>
+    {% endif %}
+</head>
+<body>
+	<!-- Panel container -->
+	<div class="panel">
+        
+        <div class="panel-button">
+            <a href="{{ url_for ('index') }}"><button>+ New Chat</button></a>
+        </div>
+
+        <hr id="panel-hr">
+
+        <div class="chat-bubble">
+            <h1 id="config">Configure Setting</h1>
+
+            <div class="config-settings">
+
+                <div class="model">
+                    <h1>Model:</h1>
+                    <p>text-davinci-003</p>
+                </div>
+
+                <div class="model-temp">
+                    <label for="slider">Model Temperature: <span class="tooltip">What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Default is 0.8</span>?</label>
+                    <input type="range" id="slider" name="slider" min="0" max="1" value="0" step="0.1" oninput="sliderChange()">
+                    <p id="slider-value">0</p>
+                </div>
+
+
+                <div class="tokens">
+                    <label for="slider"># of Tokens<span class="tooltip">The maximum number of tokens to generate in the completion. Default is 100</span>?</label>
+                    <input type="range" id="slider2" name="slider" min="0" max="100" value="0" oninput="sliderChange2()">
+                    <p id="slider-value2">0</p>
+                </div>
+
+            </div>
+
+        </div>
+	</div>
+	
+
+    
+    
+
+    <!-- Main content -->
+    <div id="main-content">
+        <h1>ChatGPT Replica</h1>
+        <p>Project by CEJ Van Niekirk</p>
+
+        <br>
+
+        <div class="options">
+
+            <div class="first">
+                <i class="fa-regular fa-sun"></i>
+                <h5>Examples</h5>
+                <div class="examples">
+                    <div class="ex1">
+                        <h1 onclick="addFirstEx()">"{{ example_prompt_one }}" →</h1>
+                    </div>
+
+                    <div class="ex2">
+                        <h1 onclick="addSecondEx()">"{{ example_prompt_two }}" →</h1>
+                    </div>
+
+                    <div class="ex3">
+                        <h1 onclick="addThirdEx()">"{{ example_prompt_three }}" →</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div class="second">
+                <i class="fa-solid fa-bolt"></i>
+                <h5>Capabilities</h5>
+                <div class="examples">
+                    <div class="ex1">
+                        <h1>Remembers what user said earlier in the conversation</h1>
+                    </div>
+
+                    <div class="ex2">
+                        <h1>Allows user to provide follow-up corrections</h1>
+                    </div>
+
+                    <div class="ex3">
+                        <h1>Trained to decline inappropriate requests</h1>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <div class="second">
+                <i class="fa-solid fa-triangle-exclamation"></i>
+                <h5>Limitations</h5>
+                <div class="examples">
+                    <div class="ex1">
+                        <h1>This is a project that is limited to text compliation model</h1>
+                    </div>
+
+                    <div class="ex2">
+                        <h1>May occasionally produce harmful instructions or biased content</h1>
+                    </div>
+
+                    <div class="ex3">
+                        <h1>Limited knowledge of world and events after 2021</h1>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+    <div id="div1">
+
+
+
+    </div>
+    
+
+
+    <div class="text-input-prompt">
+        <div class="input-and-icon-container">
+            <form action="/" method="POST" id="chat-form">
+                <input type="text" name="prompt" id="prompt">
+                <input type="submit" value="" class="find-button">
+            </form>
+        </div>
+        <h5>This is only a small project and is not the real ChatGPT, this project is limited to text compliation.</h5>
+    </div>
+    
+<script src="/static/js/content.js"></script>
+
+
+    
+</body>
+</html>
