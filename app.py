@@ -32,7 +32,6 @@ def api_response(prompt, tokens, temp):
     """
     # Use your API key
     openai.api_key = os.environ("OpenAI_Key")
-    # openai.api_key = "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"
     
     if tokens == 0:
         tokens = 100
