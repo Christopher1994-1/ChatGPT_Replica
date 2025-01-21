@@ -1,4 +1,14 @@
-body {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden; /* Optional: Prevent scrolling issues */
   background-color: #212121;
 }
 
@@ -42,7 +52,7 @@ body {
   text-align: center;
 }
 .panel .config-settings .model {
-  color: rgba(255, 255, 255, 0.808);
+  color: #B4B4B4;
   font-size: 14px;
 }
 .panel .config-settings .model h1 {
@@ -87,21 +97,10 @@ body {
 #div1 {
   overflow: auto;
   max-height: 500px;
-}
-
-#main-content {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  margin-left: 295px;
-  margin-top: 130px;
-  text-align: center;
-}
-#main-content h1 {
-  color: rgba(255, 255, 255, 0.808);
-}
-#main-content p {
-  margin-top: -20px;
-  color: rgba(255, 255, 255, 0.808);
-  font-size: 10px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 22px;
+  width: 85%;
 }
 
 .options {
@@ -330,4 +329,171 @@ body {
 
 label:hover .tooltip {
   display: block;
+}
+
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+.main-content .left-panel {
+  padding: 10;
+  width: 18%;
+  height: 100%;
+  background-color: #171717;
+}
+.main-content .left-panel .buttons {
+  display: flex;
+  justify-content: space-between;
+}
+.main-content .left-panel .buttons button {
+  background-color: transparent;
+  color: #B4B4B4;
+  width: 21%;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  padding: 7;
+  position: relative;
+}
+.main-content .left-panel .buttons button:hover {
+  background-color: #222222;
+  border-radius: 10px;
+}
+.main-content .left-panel .panel-button {
+  width: 69%;
+}
+.main-content .left-panel .panel-button button {
+  font-size: 20;
+  width: 100%;
+}
+.main-content .left-panel hr {
+  width: 90%;
+  margin: auto;
+  margin-top: 8;
+  margin-bottom: 5;
+}
+.main-content .left-panel .config-settings {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.main-content .left-panel .config-settings .model {
+  color: #B4B4B4;
+  font-size: 14px;
+}
+.main-content .left-panel .config-settings .model h1 {
+  margin-bottom: 0;
+}
+.main-content .left-panel .config-settings .model p {
+  margin-top: 0;
+}
+.main-content .left-panel .config-settings .model-temp {
+  display: flex;
+  color: #B4B4B4;
+  font-size: 14px;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+.main-content .left-panel .config-settings .model-temp #slider-value {
+  margin-top: 0;
+}
+.main-content .left-panel .config-settings .tokens {
+  display: flex;
+  color: #B4B4B4;
+  font-size: 14px;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+  margin-top: 10px;
+}
+.main-content .left-panel .config-settings .tokens #slider-value2 {
+  margin-top: 0;
+}
+.main-content .left-panel #config {
+  color: #B4B4B4;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-bottom: 10px;
+  margin-top: 11px;
+}
+.main-content .word-gen-area {
+  width: 82%;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.main-content .word-gen-area p {
+  color: #B4B4B4;
+  font-size: 30px;
+  font-family: math;
+  font-weight: bolder;
+}
+.main-content .word-gen-area .yes {
+  width: 66%;
+}
+.main-content .word-gen-area .yes form {
+  margin-bottom: 10;
+  width: 100%;
+}
+.main-content .word-gen-area .yes form input {
+  margin-top: 14px;
+  width: 100%;
+  padding: 24px;
+  background-color: #2F2F2F;
+  border: none;
+  border-radius: 10px;
+  color: #d4d4d4;
+}
+.main-content .word-gen-area .yes form input:focus {
+  outline: none;
+  border: none;
+}
+.main-content .word-gen-area small {
+  color: #B4B4B4;
+  font-family: math;
+  margin-top: 10;
+}
+
+.returnBanner .return-buttons {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.returnBanner .return-buttons button {
+  background-color: transparent;
+  color: #B4B4B4;
+  width: 21%;
+  font-size: 22px;
+  border: none;
+  cursor: pointer;
+  padding: 7;
+  position: relative;
+}
+.returnBanner .return-buttons button:hover {
+  background-color: #222222;
+  border-radius: 10px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  align-items: center;
+}
+.links a {
+  margin-bottom: 10px;
+  color: #B4B4B4;
+  text-decoration: none;
+}
+.links a:hover {
+  text-decoration: underline;
 }/*# sourceMappingURL=style.css.map */

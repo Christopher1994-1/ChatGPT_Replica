@@ -54,13 +54,13 @@ def index():
         decoded_string = b_string.decode()
         api = 'ummm no' # replace this with your actual API response
         responses[decoded_string] = api
-        return render_template('index.html', 
+        return render_template('index2.html', 
                            example_prompt_one=example_prompt_one,
                            example_prompt_two=example_prompt_two,
                            example_prompt_three=example_prompt_three,
                            responses=responses, prompt=prompt)
 
-    return render_template('index.html', 
+    return render_template('index2.html', 
                            example_prompt_one=example_prompt_one,
                            example_prompt_two=example_prompt_two,
                            example_prompt_three=example_prompt_three,

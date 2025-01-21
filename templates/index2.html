@@ -1,0 +1,96 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/assets/css/all.css">
+    <link rel="stylesheet" href="/static/assets/css/all.min.css">
+    <link rel="icon" href="/static/images/jsns-removebg-preview.ico" type="image/x-icon">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    {% if title %}
+        <title>{{ title }}</title>
+    {% else %}
+        <title>ChatGPT Replica</title>
+    {% endif %}
+</head>
+<body>
+
+    <main>
+        
+        <div class="main-content">
+            <div class="left-panel" id="left-panelID">
+
+                <div class="buttons">
+                    <button id="close_tab_button"><i class="fa-regular fa-square-caret-left"></i></button>
+                    <button id="new_chat_button">+</button>
+                </div>
+                <hr id="panel-hr">
+
+                <div class="chat-bubble">
+                    <h1 id="config">Configure Setting</h1>
+        
+                    <div class="config-settings">
+        
+                        <div class="model">
+                            <h1>Model:</h1>
+                            <p>gpt-3.5-turbo</p>
+                        </div>
+        
+                        <div class="model-temp">
+                            <label for="slider">Model Temperature: <span class="tooltip">What sampling temperature to use, between 0 and 2. Higher values like 0.8 will make the output more random, while lower values like 0.2 will make it more focused and deterministic. Default is 0.8</span>?</label>
+                            <input type="range" id="slider" name="slider" min="0" max="1" value="0" step="0.1">
+                            <p id="slider-value">0</p>
+                        </div>
+        
+        
+                        <div class="tokens">
+                            <label for="slider"># of Tokens<span class="tooltip">The maximum number of tokens to generate in the completion. Default is 100</span>?</label>
+                            <input type="range" id="slider2" name="slider" min="0" max="100" value="0">
+                            <p id="slider-value2">0</p>
+                        </div>
+        
+                    </div>
+        
+                </div>
+
+                <div class="links">
+                    <a href="" onclick="open_project_details()">All Project Details</a>
+                    <a href="/">Portfolio Home</a>
+                    <a href="">Contact</a>
+                </div>
+
+            </div>
+
+            <div class="word-gen-area" id="word-gen-areaID">
+
+                <div id="div1"></div>
+
+
+                
+                <div class="yes">
+                    <div class="top-part" id="main-content">
+                        <p>What can I help you with?</p>
+                    </div>
+    
+                    <form action="/" method="POST" id="chat-form">
+                        <input type="text" name="prompt" id="prompt" placeholder="Message ChatGPT..">
+                    </form>
+        
+                    <small>This is only a small project and is not the real ChatGPT, this project is limited to text compliation.</small>    
+
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+
+    
+<script src="/static/js/main.js"></script>
+<script src="/static/js/content.js"></script>
+
+
+    
+</body>
+</html>

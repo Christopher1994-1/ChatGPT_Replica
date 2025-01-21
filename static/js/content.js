@@ -48,37 +48,42 @@ form.addEventListener("submit", async (event) => {
   // Get the user's input and create a div to display it
   const input = document.getElementById("prompt").value;
   document.getElementById("main-content").style.display = "none";
+
+
   let temp = document.getElementById('slider').value;
   let tokens = document.getElementById('slider2').value;
+
+  const main_container = document.getElementById('word-gen-areaID');
+  main_container.style.justifyContent = "space-between";
 
 
   const userInput = document.createElement("div");
   userInput.textContent = input;
   navss.appendChild(userInput);
 
-  // Styling the newly created input element
-  // userInput.style.border = '2px solid black';
-  userInput.style.background = '#2c2c3a';
+  //. Styling the newly created input element
+  userInput.style.background = '#2F2F2F';
   userInput.style.color = "white";
   userInput.style.fontSize = "17px"
   userInput.style.fontFamily = font;
-  userInput.style.marginBottom = "5px"
-  userInput.style.marginLeft = "295px";
   userInput.style.padding = "14px";
+  userInput.style.width = "max-content";
+  userInput.style.alignSelf = "flex-end";
+  userInput.style.borderRadius = "17px";
 
   const placeholder = document.createElement("div");
   placeholder.setAttribute("id", "placeholder");
   placeholder.textContent = "...";
   navss.appendChild(placeholder);
 
-    // Styling the newly created placeholder element
-    placeholder.style.background = 'rgba(255, 255, 255, 0.103)';
+    //. Styling the newly created placeholder element
     placeholder.style.color = "white";
     placeholder.style.fontSize = "17px"
     placeholder.style.fontFamily = font;
-    placeholder.style.marginBottom = "5px"
-    placeholder.style.marginLeft = "295px";
     placeholder.style.padding = "14px";
+    placeholder.style.width = "100%";
+    placeholder.style.lineHeight = "22px";
+    placeholder.style.textAlign = "justify";
 
 
   // Send the input to the backend and get the response
