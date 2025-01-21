@@ -1,10 +1,11 @@
-$body_background_color: #2c2c3a;
+$body_background_color: #212121;
 $prompt_background_color: #23232e;
-$panel_background_color:#16161f;
+$panel_background_color: #171717;
 $font_color: rgba(255, 255, 255, 0.808);
 $main_font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 $standard_border: 2px solid black;
 $bubble_background_color: rgba(255, 255, 255, 0.103);
+$border-white: 2px solid white;
 
 
 body {
@@ -144,6 +145,7 @@ body {
     display: flex;
     width: 80%;
     margin: auto;
+    display: none;
 
 
     .first {
@@ -364,14 +366,14 @@ body {
     text-align: center;
     padding: 5px;
     position: fixed;
-    bottom: 0;
+    bottom: 230;
 
 
     .input-and-icon-container {
         
         #prompt {
             width: 85%;
-            padding: 15px;
+            padding: 25px;
             background-color: $bubble_background_color;
             border: none;
             border-radius: 5px;

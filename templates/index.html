@@ -15,6 +15,8 @@
     {% endif %}
 </head>
 <body>
+
+    
 	<!-- Panel container -->
 	<div class="panel">
         
@@ -31,7 +33,7 @@
 
                 <div class="model">
                     <h1>Model:</h1>
-                    <p>text-davinci-003</p>
+                    <p>gpt-3.5-turbo</p>
                 </div>
 
                 <div class="model-temp">
@@ -142,7 +144,7 @@
     <div class="text-input-prompt">
         <div class="input-and-icon-container">
             <form action="/" method="POST" id="chat-form">
-                <input type="text" name="prompt" id="prompt">
+                <input type="text" name="prompt" id="prompt" placeholder="Message ChapGPT">
                 <input type="submit" value="" class="find-button">
             </form>
         </div>

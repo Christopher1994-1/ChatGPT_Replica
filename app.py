@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, jsonify
 import openai
 import json
 import os
+from test import main_api_call
 
 
 app = Flask(__name__)
@@ -80,6 +81,8 @@ def index():
                            responses=responses, prompt=prompt)
 
 
+
+
 @app.route('/my_backend_endpoint', methods=['POST'])
 def my_backend_function():
     input_text = request.json.get('text')
@@ -91,7 +94,7 @@ def my_backend_function():
     else:
         temp = float(temp)
         
-    api = api_response(input_text, tokens, temp)
+    api = main_api_call(input_text)
     output_text = f'This is a test, This is a test!!'
     return jsonify({'result': api})
 
