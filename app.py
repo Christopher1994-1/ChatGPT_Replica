@@ -22,9 +22,6 @@ def api_response(prompt, tokens, temp):
     
     if tokens == 0:
         tokens = 100
-    
-        
-
 
     model_response = str(openai.Completion.create(
     model="text-davinci-003",

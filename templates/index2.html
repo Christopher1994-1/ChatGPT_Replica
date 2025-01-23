@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="/static/css/style.css">
     <link rel="stylesheet" href="/static/assets/css/all.css">
     <link rel="stylesheet" href="/static/assets/css/all.min.css">
-    <link rel="icon" href="/static/images/jsns-removebg-preview.ico" type="image/x-icon">
+    <link rel="icon" href="https://main553.b-cdn.net/portfolio/chatgpt/chatgpt-logo-chat-gpt-icon-on-black-background-free-vector.ico" type="image/x-icon">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     {% if title %}
         <title>{{ title }}</title>
@@ -19,11 +19,20 @@
     <main>
         
         <div class="main-content">
+
+            <div class="mobil-side" id="mobil-sideID">
+                <button onclick="openLeftPanel()"><i class="fa-regular fa-square-caret-left"></i></button>
+                <p>ChatGPT Replica</p>
+                <button onclick="openMobileMenu()"><i class="fa-solid fa-bars"></i></button>
+            </div>
+
+
             <div class="left-panel" id="left-panelID">
 
-                <div class="buttons">
+                <div class="buttons" id="buttonsID">
                     <button id="close_tab_button"><i class="fa-regular fa-square-caret-left"></i></button>
                     <button id="new_chat_button">+</button>
+
                 </div>
                 <hr id="panel-hr">
 
@@ -49,15 +58,22 @@
                             <input type="range" id="slider2" name="slider" min="0" max="100" value="0">
                             <p id="slider-value2">0</p>
                         </div>
+
         
                     </div>
         
                 </div>
 
                 <div class="links">
-                    <a href="" onclick="open_project_details()">All Project Details</a>
+                    <button onclick="open_project_details()">All Project Details</button>
                     <a href="/">Portfolio Home</a>
                     <a href="">Contact</a>
+                </div>
+
+
+                <div class="mobile" id="mobile-buttons1ID">
+                    <button onclick="closeMobileLeftPanel()">Confirm</button>
+                    <button onclick="closeMobileLeftPanel()">Exit</button>
                 </div>
 
             </div>
@@ -65,12 +81,24 @@
             <div class="word-gen-area" id="word-gen-areaID">
 
                 <div id="div1"></div>
-
-
                 
                 <div class="yes">
                     <div class="top-part" id="main-content">
                         <p>What can I help you with?</p>
+                    </div>
+
+
+                    <div class="mobile-buttons" id="buttons-mobileID">
+                        <div class="first">
+                            <button onclick="open_project_details()"><i class="fa-solid fa-graduation-cap" id="icon1"></i> Project Details</button>
+                            <a href="#"><button><i class="fa-solid fa-location-dot" id="icon2"></i> Porfolio Home</button></a>
+                        </div>
+
+                        <div class="second">
+                            <a href="#"><button><i class="fa-regular fa-address-card" id="icon3"></i> Contact</button></a>
+                            <button disabled><i class="fa-regular fa-pen-to-square" id="icon4"></i> Help me write</button>
+                            <button disabled>More</button>
+                        </div>
                     </div>
     
                     <form action="/" method="POST" id="chat-form">

@@ -56,6 +56,12 @@ form.addEventListener("submit", async (event) => {
   const main_container = document.getElementById('word-gen-areaID');
   main_container.style.justifyContent = "space-between";
 
+  //. GETTING RID OF THE MOBILE BUTTONS
+  let MobileButtons = document.getElementById("buttons-mobileID");
+  
+  if (MobileButtons) {
+    MobileButtons.style.display = "none";
+  };
 
   const userInput = document.createElement("div");
   userInput.textContent = input;

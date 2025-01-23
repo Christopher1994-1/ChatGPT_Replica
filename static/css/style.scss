@@ -7,6 +7,13 @@ $standard_border: 2px solid black;
 $bubble_background_color: rgba(255, 255, 255, 0.103);
 $border-white: 2px solid white;
 
+//. ICON COLORS OF FOR MOBILE VERSION
+$icon-color-one: #8BCEE8;
+$icon-color-two: #DDC659;
+$icon-color-three: #DC8951;
+$icon-color-four: #C18DCC;
+
+
 
 * {
     margin: 0;
@@ -432,21 +439,21 @@ html, body {
 
 
 
-  .tooltip {
-    display: none;
-    position: absolute;
-    z-index: 1;
-    padding: 5px;
-    margin-left: 100px;
-    border-right: 1px solid $panel_background_color;
-    padding: 5px;
-    color: $font_color;
-    background-color: $body_background_color;
-  }
-  
-  label:hover .tooltip {
-    display: block;
-  }
+.tooltip {
+display: none;
+position: absolute;
+z-index: 1;
+padding: 5px;
+margin-left: 100px;
+border-right: 1px solid $panel_background_color;
+padding: 5px;
+color: $font_color;
+background-color: $body_background_color;
+}
+
+label:hover .tooltip {
+display: block;
+}
   
 
 
@@ -649,6 +656,8 @@ html, body {
 }
 
 
+
+
 .links {
     display: flex;
     flex-direction: column;
@@ -659,9 +668,266 @@ html, body {
         margin-bottom: 10px;
         color: #B4B4B4;
         text-decoration: none;
+        font-family: math;
+
 
         &:hover {
             text-decoration: underline;
         }
     }
+
+    button {
+        background-color: transparent;
+        border: none;
+        color: #B4B4B4;
+        margin-bottom: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        font-family: math;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}
+
+
+
+
+//. FOR THE PROJECT DETAILS DIV
+.projectDetails_div {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.754);
+    color: #B4B4B4;
+    font-family: math;
+    z-index: 50;
+
+
+    .close_projectDetails {
+        position: fixed;
+        right: 6;
+        width: 100%;
+        text-align: end;
+
+        button {
+            padding: 0;
+            font-size: 35px;
+            width: 5%;
+            background-color: transparent;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    }
+
+
+    .main-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #2F2F2F;
+        padding: 30px;
+        width: 65%;
+        display: flex;
+        flex-direction: column;
+        row-gap: 23px;
+        z-index: 100;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+
+            span {
+                color: white;
+            }
+        }
+    }
+
+}
+
+
+
+
+
+//. MOBILE BUTTONS 
+.mobil-side {
+    display: none;
+    position: fixed;
+    top: 10;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: #B4B4B4;
+
+    button {
+        width: 12%;
+        padding: 4px;
+        font-size: 21px;
+        background-color: transparent;
+        border: none;
+        color: #B4B4B4;
+    }
+
+
+    p {
+        font-family: math;
+    }
+
+
+}
+
+
+
+
+//. MOBILE BUTTONS
+.mobile-buttons {
+    display: none;
+
+}
+
+
+
+#mobile-buttons1ID {
+    display: none;
+    justify-content: center;
+
+    button {
+        background-color: transparent;
+        width: 27%;
+        padding: 4px;
+        font-size: 21px;
+        border: 1px solid white;
+        color: #B4B4B4;
+        margin-left: 13px;
+        border-radius: 10px;
+    }
+}
+
+.mobileMenu {
+    position: fixed;
+    right: 0;
+    top: 0;
+    right: 9px;
+    top: 40px;
+    background-color: #393939;
+    padding: 10;
+
+    .lists {
+        background-color: #393939;
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        font-family: math;
+    }
+
+    a {
+        color: white;
+        text-decoration: none;
+        margin-bottom: 13px;
+    }
+
+}
+
+
+@media(max-width:500px) {
+    .left-panel {
+        display: none;
+    }
+
+    .mobil-side {
+        display: flex;
+    }
+
+
+    .mobile-buttons {
+        display: flex;
+        flex-direction: column;
+        row-gap: 15px;
+        margin-top: 30px;
+
+
+        button {
+            background-color: transparent;
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid white;
+            margin-left: 8px;
+            color: #B4B4B4;
+        }
+    }
+
+
+    .main-content {
+
+        .word-gen-area {
+            width: 100%;
+
+
+            .yes {
+                height: 100%;
+                padding-top: 130px;
+                width: 100%;
+
+
+                form {
+                    position: fixed;
+                    bottom: 25;
+
+                    input {
+                        width: 97%;
+                        padding: 31px;
+                        margin-bottom: 5px;
+                    }
+                }
+
+
+                small {
+                    position: fixed;
+                    bottom: 4;
+                    width: 100%;
+                    left: 0;
+                }
+            }
+        }
+    }
+
+
+
+    #icon1 {
+        color: $icon-color-one;
+    }
+
+    #icon2 {
+        color: $icon-color-two;
+    }
+
+    #icon3 {
+        color: $icon-color-three;
+    }
+
+    #icon4 {
+        color: $icon-color-four;
+    }
+
+    
+    #div1 {
+        overflow: auto;
+        display: flex;
+        flex-direction: column;
+        margin-top: 22px;
+        width: 85%;
+        position: absolute;
+        top: 41px;
+        height: 100%;
+    }
+
 }
